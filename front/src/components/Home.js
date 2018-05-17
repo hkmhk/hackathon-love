@@ -1,16 +1,18 @@
 import React, { Component } from 'react';
-import {MainContainer} from '../assets/js/styled';
+import { MainContainer, TitleMain, NameCharacter } from '../assets/js/styled';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-
-        
-
+import HeadingProfil from './HeadingProfil';
 
 class Home extends Component {
 
     render() {
         return (
             <MainContainer>
-                <FontAwesomeIcon icon={["far","heart"]} size="4x" style={{color:"white"}}/>
+                <TitleMain>ONE love <br /> MANY Galaxies</TitleMain>
+                <FontAwesomeIcon icon={["far", "heart"]} size="4x" style={{ color: "white" }} />
+                <FontAwesomeIcon icon="thumbs-up" size="2x" style={{ color: "white" }} />
+                <FontAwesomeIcon icon="thumbs-down" size="2x" style={{ color: "white" }} />
+                <HeadingProfil></HeadingProfil>
             </MainContainer>
         );
     }
