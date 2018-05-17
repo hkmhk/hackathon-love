@@ -21,15 +21,7 @@ class App extends Component {
 
     return (
       <div>
-        <Input type='email' placeholder='Email' />
-        <Input type='text' placeholder='Nom' />
-        <Input type='password' placeholder='Mot de passe' />
-        <Input type='text' placeholder='Galaxie' />
-        {/* */}
-        
-        <PageButton text="Connexion" />
-        <PageButton couleur='linear-gradient(to right, #673AB7 0%, #512DA8 51%, #673AB7 100%)' colorText="white" text="Inscription" />
-
+        {routes()}
       </div>
     );
   }
