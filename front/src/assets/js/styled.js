@@ -16,7 +16,6 @@ export const Exemple2 = styled.h1`
   color: palevioletred;
 `;
 
-<<<<<<< Updated upstream
 export const LogoImg = styled.div`
     width: 40%;
     height:40%;
@@ -36,7 +35,6 @@ export const MainContainer = styled.div`
     background: radial-gradient(circle at top left,#070048, #3218B1, #3E25BD, #5437DC, #E12BFF 90%);
     min-height:100vh;
 `
-=======
 export const ButtonPage = styled.button`
     background: ${props => props.couleur ? props.couleur : "white"};
     border-radius: 20px;
@@ -45,4 +43,3 @@ export const ButtonPage = styled.button`
     color:  ${props => props.colorText ? props.colorText : "red"};
     border: inherit;
 `;
->>>>>>> Stashed changes
