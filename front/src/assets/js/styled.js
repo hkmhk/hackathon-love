@@ -20,13 +20,22 @@ export const Exemple2 = styled.h1`
   color: palevioletred;
 `;
 
-export const MainContainer = styled.div`
-  height:100%;
-  width: 100%;
-  dipslay:flex;
-`;
-
-export const MainRowThree = styled.div`
-    
+export const LogoImg = styled.div`
+    width: 40%;
+    height:40%;
+    position:absolute;
+    transform:translate(-50%,-40%);
+    top:40%;
+    left:50%;
 `
 
+export const Icon = styled.div`
+    position:absolute;
+    transform:translate(-50%,-80%);
+    top:80%;
+    left:50%;
+`
+export const MainContainer = styled.div`
+    background: radial-gradient(circle at top left,#070048, #3218B1, #3E25BD, #5437DC, #E12BFF 90%);
+    min-height:100vh;
+`
