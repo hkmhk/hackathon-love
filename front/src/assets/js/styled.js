@@ -20,6 +20,7 @@ export const Exemple2 = styled.h1`
   color: palevioletred;
 `;
 
+<<<<<<< Updated upstream
 export const MainContainer = styled.div`
   height:100%;
   width: 100%;
@@ -30,3 +31,20 @@ export const MainRowThree = styled.div`
     
 `
 
+=======
+export const TitleMain = styled.h1`
+    font-family: "Avenir Next", sans-serif;
+    text-align: center;
+    font-weight: bold;
+    font-size: 2rem;
+    color: black;
+`;
+
+export const NameCharacter = styled.h2`
+    font-family: "Avenir Next", sans-serif;
+    font-weight: Multiple;
+    font-size: 1.5rem;
+`;
+
+export const 
+>>>>>>> Stashed changes
