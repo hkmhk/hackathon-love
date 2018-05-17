@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
-import '../assets/css/index.css';
-import {getData} from '../assets/js/axios';
+import { getData } from '../assets/js/axios';
+import PageButton from './PageButton'
 import Input from './Input'; 
 
 
@@ -8,12 +8,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      characters:[]
+      characters: []
     }
   }
-  
+
+
   componentWillMount() {
-    getData("https://akabab.github.io/starwars-api/api/all.json").then(characters => this.setState({characters}));
+    getData("https://akabab.github.io/starwars-api/api/all.json").then(characters => this.setState({ characters }));
   }
 
   render() {
@@ -26,6 +27,9 @@ class App extends Component {
         <Input type='text' placeholder='Galaxie' />
         {/* */}
         
+        <PageButton text="Connexion" />
+        <PageButton couleur='linear-gradient(to right, #673AB7 0%, #512DA8 51%, #673AB7 100%)' colorText="white" text="Inscription" />
+
       </div>
     );
   }
