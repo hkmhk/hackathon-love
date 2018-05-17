@@ -1,13 +1,11 @@
 import React, { Component } from 'react';
-import {LogoImg , Icon} from '../assets/js/styled';
+import { LogoImg, Icon, TitleMain } from '../assets/js/styled';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 import { getData } from '../assets/js/axios';
 import robot from '../assets/images/robot_logo.png';
 
 
 import { getRandomInt } from '../assets/js/lib';
-
-        
 
 
 class Home extends Component {
@@ -33,12 +31,13 @@ class Home extends Component {
     render() {
         return (
             <div>
-              <LogoImg>
-                  <img src={robot} alt={robot} style={{maxWidth:"100%"}}/>
-              </LogoImg>
-              <Icon>
-                  <FontAwesomeIcon icon={['far', 'heart']} style={{color:"white"}} size="3x"/>
-              </Icon>
+                <LogoImg>
+                    <img src={robot} alt={robot} style={{ maxWidth: "100%" }} />
+                </LogoImg>
+                <TitleMain>ONE Love <br />MANY Galaxies</TitleMain>
+                <Icon>
+                    <FontAwesomeIcon icon={['far', 'heart']} style={{ color: "white" }} size="3x" />
+                </Icon>
             </div>
         );
     }

@@ -7,9 +7,9 @@ import registerServiceWorker from './registerServiceWorker';
 
 //FontAwesome
 import fontawesome from '@fortawesome/fontawesome';
-import {faHeart} from '@fortawesome/fontawesome-free-regular';
-import { faThumbsUp } from '@fortawesome/fontawesome-free-solid';
-
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { faHeart } from '@fortawesome/fontawesome-free-regular';
+import { faThumbsUp, faThumbsDown } from '@fortawesome/fontawesome-free-solid'
 
 
 //bootstrap lib
