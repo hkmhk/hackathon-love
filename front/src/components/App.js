@@ -1,13 +1,22 @@
 import React, { Component } from 'react';
-import { TitleMain, NameCharacter } from '../assets/js/styled'
+import { getData } from '../assets/js/axios';
+import PageButton from './PageButton'
 
 
-
-import routes from '../routes';
 
 
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      characters: []
+    }
+  }
 
+
+  componentWillMount() {
+    getData("https://akabab.github.io/starwars-api/api/all.json").then(characters => this.setState({ characters }));
+  }
 
 
   render() {
@@ -21,4 +30,3 @@ class App extends Component {
 }
 
 export default App;
-

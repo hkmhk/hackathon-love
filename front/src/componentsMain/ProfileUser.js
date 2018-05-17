@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import { MainContainer } from '../assets/js/styled'
 import HeadingProfil from '../components/HeadingProfil';
 
 class ProfileUser extends Component {

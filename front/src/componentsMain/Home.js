@@ -8,8 +8,6 @@ import robot from '../assets/images/robot_logo.png';
 import { getRandomInt } from '../assets/js/lib';
 
 
-
-
 class Home extends Component {
     constructor(props) {
         super(props);

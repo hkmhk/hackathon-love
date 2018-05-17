@@ -1,17 +1,13 @@
 
 import styled from 'styled-components';
 
-
-export const Exemple1 = styled.button`
-    width: 150px;
-    height: 60px;
-    background: black;
-    border-radius: 5px;
-    color:white;
-    font-size:20px;
-    &:hover{
-        background:blue;
-    }
+export const ButtonFiltre = styled.button`
+    background-image: linear-gradient(to right, #673AB7 0%, #512DA8 51%, #673AB7 100%);
+    border-radius: 20px;
+    width: 10rem;
+    height:2rem;
+    color: white;
+    border: inherit;
 `;
 
 export const Exemple2 = styled.h1`
@@ -35,8 +31,30 @@ export const TitleMain = styled.h1`
 
 export const NameCharacter = styled.h2`
     font-family: "Avenir Next", sans-serif;
-    font-weight: Multiple;
+    font-weight: light;
+    font-size: 2rem;
+    color: white;
+`;
+
+export const Pourcentage = styled.h3`
+    font-family: "Avenir Next", sans-serif;
+    font-weight: bold;
     font-size: 1.5rem;
+    color: white;
+`;
+
+export const InformationsTitle = styled.h4`
+    font-family: "Avenir Next", sans-serif;
+    font-weight: regular;
+    font-size: 1.3rem;
+    color: white;
+`;
+
+export const Paragraphes = styled.p`
+    font-family: "Avenir Next", sans-serif;
+    font-weight: regular;
+    font-size: 1.1rem;
+    color: white;
 `;
 
 export const LogoImg = styled.div`
@@ -58,3 +76,11 @@ export const MainContainer = styled.div`
     background: radial-gradient(circle at top left,#070048, #3218B1, #3E25BD, #5437DC, #E12BFF 90%);
     min-height:100vh;
 `
+export const ButtonPage = styled.button`
+    background: ${props => props.couleur ? props.couleur : "white"};
+    border-radius: 20px;
+    width: 10rem;
+    height:2rem;
+    color:  ${props => props.colorText ? props.colorText : "red"};
+    border: inherit;
+`;
