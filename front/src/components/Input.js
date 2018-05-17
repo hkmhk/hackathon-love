@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
-import { InputStyle } from '../assets/js/styled'
-import { IconStyle } from '../assets/js/styled'
+import FontAwesomeIcon from '@fortawesome/react-fontawesome';
+import { InputLogin } from '../assets/js/styled'
+
 
 
 
@@ -8,16 +9,14 @@ class Input extends Component {
 
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = {};
     }
 
     render() {
         return (
-                <form>
-                    <div class="form-group">
-                        <IconStyle icon={this.props.class} /><InputStyle type={this.props.type} class="form-control" id="" placeholder={this.props.placeholder} />
-                    </div>
-                </form>
+            <div className="col-10">
+                <FontAwesomeIcon icon={this.props.icon} /><InputLogin type={this.props.type} class="form-control" id={this.props.text} placeholder={this.props.string} />
+            </div>
         );
     }
 }
