@@ -20,18 +20,17 @@ export const Exemple2 = styled.h1`
   color: palevioletred;
 `;
 
-export const MainContainer = styled.div`
-  height:100%;
-  width: 100%;
-  dipslay:flex;
-`;
-
 export const TitleMain = styled.h1`
     font-family: "Avenir Next", sans-serif;
     text-align: center;
     font-weight: bold;
-    font-size: 2rem;
+    font-size: 1.8rem;
     color: white;
+    position:absolute;
+    width:100%;
+    transform:translate(-50%,-67%);
+    top:67%;
+    left:50%;
 `;
 
 export const NameCharacter = styled.h2`
@@ -39,3 +38,23 @@ export const NameCharacter = styled.h2`
     font-weight: Multiple;
     font-size: 1.5rem;
 `;
+
+export const LogoImg = styled.div`
+    width: 55%;
+    height:55%;
+    position:absolute;
+    transform:translate(-50%,-40%);
+    top:40%;
+    left:50%;
+`
+
+export const Icon = styled.div`
+    position:absolute;
+    transform:translate(-50%,-80%);
+    top:85%;
+    left:50%;
+`
+export const MainContainer = styled.div`
+    background: radial-gradient(circle at top left,#070048, #3218B1, #3E25BD, #5437DC, #E12BFF 90%);
+    min-height:100vh;
+`

@@ -11,7 +11,7 @@ class HeadingProfil extends Component {
     render() {
         return (
             <div className="row">
-                <h2>{this.props.character.name}</h2>
+                <h2 style={{ NameCharacter }}>{this.props.characters.name}</h2>
             </div>
         );
     }

@@ -12,7 +12,6 @@ class Home extends Component {
                 <FontAwesomeIcon icon={["far", "heart"]} size="4x" style={{ color: "white" }} />
                 <FontAwesomeIcon icon="thumbs-up" size="2x" style={{ color: "white" }} />
                 <FontAwesomeIcon icon="thumbs-down" size="2x" style={{ color: "white" }} />
-                <HeadingProfil></HeadingProfil>
             </MainContainer>
         );
     }
