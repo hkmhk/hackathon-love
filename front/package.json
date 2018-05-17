@@ -4,10 +4,7 @@
   "private": true,
   "dependencies": {
     "@fortawesome/fontawesome": "^1.1.8",
-<<<<<<< HEAD
-=======
     "@fortawesome/fontawesome-free-regular": "^5.0.13",
->>>>>>> 281b2364383fd1b2019a0fb3bcc8d4350a1079ac
     "@fortawesome/fontawesome-free-solid": "^5.0.13",
     "@fortawesome/react-fontawesome": "0.0.20",
     "axios": "^0.18.0",

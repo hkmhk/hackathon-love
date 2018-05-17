@@ -18,7 +18,6 @@ export const Exemple2 = styled.h1`
   color: palevioletred;
 `;
 
-<<<<<<< HEAD
 export const NavBar = styled.nav`
   position: fixed;
   height: 9vh;
@@ -26,24 +25,37 @@ export const NavBar = styled.nav`
   background-color: #666666;
   bottom: 0;
 `;
-=======
 export const LogoImg = styled.div`
-    width: 40%;
-    height:40%;
-    position:absolute;
-    transform:translate(-50%,-40%);
-    top:40%;
-    left:50%;
-`
+  width: 40%;
+  height: 40%;
+  position: absolute;
+  transform: translate(-50%, -40%);
+  top: 40%;
+  left: 50%;
+`;
 
 export const Icon = styled.div`
-    position:absolute;
-    transform:translate(-50%,-80%);
-    top:80%;
-    left:50%;
-`
+  position: absolute;
+  transform: translate(-50%, -80%);
+  top: 80%;
+  left: 50%;
+`;
+
 export const MainContainer = styled.div`
-    background: radial-gradient(circle at top left,#070048, #3218B1, #3E25BD, #5437DC, #E12BFF 90%);
-    min-height:100vh;
-`
->>>>>>> 281b2364383fd1b2019a0fb3bcc8d4350a1079ac
+  background: radial-gradient(
+    circle at top left,
+    #070048,
+    #3218b1,
+    #3e25bd,
+    #5437dc,
+    #e12bff 90%
+  );
+  min-height: 100vh;
+`;
+
+export const Icon = styled.div`
+  position: absolute;
+  transform: translate(-50%, -80%);
+  top: 80%;
+  left: 50%;
+`;

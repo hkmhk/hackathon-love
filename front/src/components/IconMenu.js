@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { NavBar } from "../assets/js/styled";
 import FontAwesomeIcon from "@fortawesome/react-fontawesome";
-class BarreMenu extends Component {
+
+class IconMenu extends Component {
   constructor(props) {
     super(props);
     this.state = {};
@@ -10,12 +11,10 @@ class BarreMenu extends Component {
   render() {
     return (
       <div>
-        <NavBar>
-          <FontAwesomeIcon icon="coffee" />
-        </NavBar>
+        <h1>tommy</h1>
       </div>
     );
   }
 }
 
-export default BarreMenu;
+export default IconMenu;
