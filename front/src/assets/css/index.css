@@ -3,3 +3,10 @@ body {
   padding: 0;
   font-family: sans-serif;
 }
+
+#root{
+  position: absolute;
+  min-height: 100%;
+  width:100%;
+  background: radial-gradient(to bottom right, circle,#070048, #3218B1, #3E25BD, #5437DC, #E12BFF 90%);
+}

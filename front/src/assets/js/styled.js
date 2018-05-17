@@ -19,3 +19,14 @@ export const Exemple2 = styled.h1`
   text-align: center;
   color: palevioletred;
 `;
+
+export const MainContainer = styled.div`
+  height:100%;
+  width: 100%;
+  dipslay:flex;
+`;
+
+export const MainRowThree = styled.div`
+    
+`
+
