@@ -16,6 +16,7 @@ export const Exemple2 = styled.h1`
   color: palevioletred;
 `;
 
+
 export const TitleMain = styled.h1`
     font-family: "Avenir Next", sans-serif;
     text-align: center;
@@ -84,3 +85,4 @@ export const ButtonPage = styled.button`
     color:  ${props => props.colorText ? props.colorText : "red"};
     border: inherit;
 `;
+

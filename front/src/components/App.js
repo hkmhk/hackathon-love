@@ -1,8 +1,7 @@
 import React, { Component } from 'react';
 import { getData } from '../assets/js/axios';
 import PageButton from './PageButton'
-
-
+import Input from './Input'; 
 
 
 class App extends Component {
@@ -17,7 +16,6 @@ class App extends Component {
   componentWillMount() {
     getData("https://akabab.github.io/starwars-api/api/all.json").then(characters => this.setState({ characters }));
   }
-
 
   render() {
 
