@@ -1,17 +1,13 @@
 
 import styled from 'styled-components';
 
-
-export const Exemple1 = styled.button`
-    width: 150px;
-    height: 60px;
-    background: black;
-    border-radius: 5px;
-    color:white;
-    font-size:20px;
-    &:hover{
-        background:blue;
-    }
+export const ButtonFiltre = styled.button`
+    background-image: linear-gradient(to right, #673AB7 0%, #512DA8 51%, #673AB7 100%);
+    border-radius: 20px;
+    width: 10rem;
+    height:2rem;
+    color: white;
+    border: inherit;
 `;
 
 export const Exemple2 = styled.h1`
@@ -20,6 +16,7 @@ export const Exemple2 = styled.h1`
   color: palevioletred;
 `;
 
+<<<<<<< Updated upstream
 export const LogoImg = styled.div`
     width: 40%;
     height:40%;
@@ -39,3 +36,13 @@ export const MainContainer = styled.div`
     background: radial-gradient(circle at top left,#070048, #3218B1, #3E25BD, #5437DC, #E12BFF 90%);
     min-height:100vh;
 `
+=======
+export const ButtonPage = styled.button`
+    background: ${props => props.couleur ? props.couleur : "white"};
+    border-radius: 20px;
+    width: 10rem;
+    height:2rem;
+    color:  ${props => props.colorText ? props.colorText : "red"};
+    border: inherit;
+`;
+>>>>>>> Stashed changes
