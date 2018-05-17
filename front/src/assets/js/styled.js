@@ -44,3 +44,11 @@ export const ButtonPage = styled.button`
     border: inherit;
     position: absolu;
 `;
+
+export const InputLogin = styled.input`
+    background: transparent;
+    border:none;
+    border-bottom: 1px solid white;
+    color: white;
+    cursor: pointer;
+`
