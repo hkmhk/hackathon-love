@@ -1,21 +1,27 @@
-
-import styled from 'styled-components';
-
+import styled from "styled-components";
 
 export const Exemple1 = styled.button`
-    width: 150px;
-    height: 60px;
-    background: black;
-    border-radius: 5px;
-    color:white;
-    font-size:20px;
-    &:hover{
-        background:blue;
-    }
+  width: 150px;
+  height: 60px;
+  background: black;
+  border-radius: 5px;
+  color: white;
+  font-size: 20px;
+  &:hover {
+    background: blue;
+  }
 `;
 
 export const Exemple2 = styled.h1`
   font-size: 1.5em;
   text-align: center;
   color: palevioletred;
+`;
+
+export const NavBar = styled.nav`
+  position: fixed;
+  height: 9vh;
+  width: 100vw;
+  background-color: #666666;
+  bottom: 0;
 `;
