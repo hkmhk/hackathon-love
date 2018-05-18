@@ -8,6 +8,10 @@ import Firebase from '../auth';
 import { UserPicture } from '../assets/js/styled';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
+
+
+import Yoda from "../assets/images/yoda.png"
+
 import { affiniteTag,ageTag,genderTag, getRandomInt} from "../assets/js/lib";
 import { checkUser } from '../assets/js/authFirebase';
 
@@ -15,6 +19,7 @@ import { checkUser } from '../assets/js/authFirebase';
 
 import PageButton from '../components/PageButton';
 import Input from '../components/Input';
+
 
 
 class SimpleSlider extends Component {
@@ -53,11 +58,13 @@ class SimpleSlider extends Component {
             mobileFirst: true
         };
 
+
         
         const randomNumber = getRandomInt(1,120);
         const randomAffiTags = affiniteTag.slice(randomNumber,randomNumber+14);
         const affiTags = randomAffiTags.map((el, i) => <PageButton text={`# ${el}`} key={i} marg="4px"/>);
         const ageTags = ageTag.map((el, i) => <PageButton text={`# entre ${el[0]} et ${el[1]} `} key={i} marg="4px" /> );
+
 
         const genderTags = genderTag.map((el, i) => <PageButton text={`# ${el}`} key={i} marg="4px" />);
 
@@ -68,7 +75,7 @@ class SimpleSlider extends Component {
                     <div className="d-flex align-items-center" style={{ height: "100vh" }}>
                         <div className="container">
                             <div className="d-flex w-100 justify-content-center">
-                                <UserPicture></UserPicture>
+                                <UserPicture> <img src={Yoda} alt="Photo de maître Yoda" /></UserPicture>
                             </div>
                             <div className="d-flex w-100 justify-content-center mt-4">
                                 <div className="d-flex d-inline-block">

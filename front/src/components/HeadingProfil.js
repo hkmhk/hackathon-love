@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import { NameCharacter, Pourcentage, Paragraphes } from '../assets/js/styled';
+import { NameCharacter, Pourcentage, InformationsTitle } from '../assets/js/styled';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 
@@ -58,7 +58,7 @@ class HeadingProfil extends Component {
                     </div>
                 </div>
                 <div className="row mt-1">
-                    <Paragraphes>Affinités</Paragraphes>
+                    <InformationsTitle >Affinités</InformationsTitle >
                 </div>
             </div>
         );

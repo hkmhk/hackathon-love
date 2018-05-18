@@ -5,6 +5,7 @@ import App from "./componentsMain/App";
 import registerServiceWorker from "./registerServiceWorker";
 
 //FontAwesome
+
 import fontawesome from "@fortawesome/fontawesome";
 import { faHeart } from "@fortawesome/fontawesome-free-regular";
 import {
@@ -18,9 +19,11 @@ import {
   faSignOutAlt
 } from "@fortawesome/fontawesome-free-solid";
 
+
 //bootstrap lib
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
+
 
 fontawesome.library.add(
   faHeart,

@@ -2,10 +2,12 @@
 import React, { Component } from 'react';
 import SliderCard from '../components/SliderCard';
 
+
 import PageFilter from '../components/PageFilter';
 import BarreMenu from "../components/BarreMenu";
 
 import { getRandomInt} from '../assets/js/lib';
+
 import { getData } from '../assets/js/axios';
 import { checkUser } from '../assets/js/authFirebase';
 import Firebase from '../auth';
@@ -24,7 +26,8 @@ class Main extends Component {
 
 
     componentWillMount() {
-        getData("https://akabab.github.io/starwars-api/api/all.json").then(res => {
+        getData("https://cdn.rawgit.com/akabab/starwars-api/0.2.1/api/all.json").then(res => {
+            console.log(typeof res);
             const characters = res.map(el => {
                 el.age = getRandomInt(20, 50);
                 return el;
@@ -61,6 +64,6 @@ class Main extends Component {
     );
   }
 
-}
+
 
 export default Main;

@@ -22,46 +22,58 @@ export const TitleTags = styled.h1`
 `;
 
 export const TitleMain = styled.h1`
-  font-family: "Avenir Next", sans-serif;
-  text-align: center;
-  font-weight: bold;
-  font-size: 1.8rem;
-  color: white;
-  position: absolute;
-  width: 100%;
-  transform: translate(-50%, -67%);
-  top: 67%;
-  left: 50%;
+
+    font-family: "Roboto", sans-serif;
+    text-align: center;
+    font-weight: 800;
+    font-size: 1.8rem;
+    color: white;
+    position:absolute;
+    width:100%;
+    transform:translate(-50%,-67%);
+    top:67%;
+    left:50%;
 `;
 
 export const NameCharacter = styled.h2`
-  font-family: "Avenir Next", sans-serif;
-  font-weight: light;
-  font-size: 2rem;
-  color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 500;
+    font-size: 2rem;
+    letter-spacing: 2px;
+    line-height: 2.5rem;;
+    color: white;
+    position: absolute;
+    top: 30%;
 `;
 
 export const Pourcentage = styled.h3`
-  font-family: "Avenir Next", sans-serif;
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 900;
+    font-size: 1.5rem;
+    color: white;
+    margin-top: 10px;
+    position: absolute;
+    left: 53%;
 `;
 
 export const InformationsTitle = styled.h4`
-  font-family: "Avenir Next", sans-serif;
-  font-weight: regular;
-  font-size: 1.3rem;
-  color: white;
+    font-family: "Roboto", sans-serif;
+    font-weight: 100;
+    font-size: 1.4rem;
+    color: white;
+    border-bottom: 1px solid rgba(255,255,255, 0.7);
+    width:100%;
+    margin-top: 5rem;
+    margin-bottom: 1rem;
+    padding-bottom : 5px;
 `;
 
 export const Paragraphes = styled.p`
-  font-family: "Avenir Next", sans-serif;
-  font-weight: regular;
-  font-size: 1.1rem;
-  color: rgba(255, 255, 255, 0.7);
-  width: 50%;
-  border-bottom: 1px solid rgba(255, 255, 255, 0.7);
+    font-family: "Roboto", sans-serif;
+    font-weight: 300;
+    font-size: 1rem;  
+    color: white;
+    margin-bottom: 0;
 `;
 
 export const LogoImg = styled.div`
@@ -107,6 +119,32 @@ export const ButtonPage = styled.button`
 
     width: ${props => props.wth ? props.wth : "auto"};
     height:${props => props.hth ? props.hth : "30px"}
+s
+    color:  ${props => props.colorText ? props.colorText : "#cf2dfb"};
+    border: inherit;
+    overflow: hidden;
+    cursor: pointer;
+`;
+
+export const InputLogin = styled.input`
+    font-family: "Roboto", sans-serif;
+    font-size: 16px;
+    font-weight: 300;
+    background: transparent;
+    border:none;
+    border-bottom: 1px solid white;
+    color: white;
+    cursor: pointer;
+    margin-bottom: 40px;
+    width:100%;
+    ::placeholder {
+        color: white;
+        font-weight: 300;
+    }
+    :focus{
+        outline:none;
+    }
+
     color:  ${props => props.colorText ? props.colorText : "#BD10E0"};
     border: inherit;
     overflow:hidden;
@@ -130,6 +168,7 @@ export const InputLogin = styled.input`
   :focus {
     outline: none;
   }
+
 `;
 
 export const Container = styled.div`
@@ -148,12 +187,12 @@ export const BoxLogin = styled.div`
 `;
 
 export const UserPicture = styled.div`
+    width: 170px;
+    height: 170px;
 
-    width:150px;
-    height:150px;
     border-radius:50%;
-    background:black;
-    transform:translateY(-60%);
+    transform : translateY(-60%);
+
 `
 export const FilterPage = styled.div`
     height:92vh;
