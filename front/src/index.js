@@ -11,14 +11,27 @@ import {
   faThumbsUp,
   faThumbsDown,
   faGlobe,
-  faUser
+  faUser,
+  faHome,
+  faSearch,
+  faSignOut,
+  faSignOutAlt
 } from "@fortawesome/fontawesome-free-solid";
 
 //bootstrap lib
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap/dist/js/bootstrap.bundle.min";
 
-fontawesome.library.add(faHeart, faThumbsUp, faThumbsDown, faUser, faGlobe);
+fontawesome.library.add(
+  faHeart,
+  faThumbsUp,
+  faThumbsDown,
+  faUser,
+  faGlobe,
+  faHome,
+  faSearch,
+  faSignOutAlt
+);
 
 ReactDOM.render(<App />, document.getElementById("root"));
 registerServiceWorker();

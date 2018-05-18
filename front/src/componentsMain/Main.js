@@ -2,6 +2,7 @@ import React, { Component } from "react";
 import SliderCard from "../components/SliderCard";
 import { getRandomInt } from "../assets/js/lib";
 import { getData } from "../assets/js/axios";
+import BarreMenu from "../components/BarreMenu";
 
 class Main extends Component {
   constructor(props) {
@@ -25,6 +26,7 @@ class Main extends Component {
     return (
       <div>
         <SliderCard characters={this.state.characters} />
+        <BarreMenu />
       </div>
     );
   }
