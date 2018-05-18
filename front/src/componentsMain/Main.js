@@ -1,10 +1,15 @@
 
 import React, { Component } from 'react';
 import SliderCard from '../components/SliderCard';
+
+import PageFilter from '../components/PageFilter';
+import BarreMenu from "../components/BarreMenu";
+
 import { getRandomInt} from '../assets/js/lib';
 import { getData } from '../assets/js/axios';
 import { checkUser } from '../assets/js/authFirebase';
 import Firebase from '../auth';
+
 
 
 
@@ -45,14 +50,17 @@ class Main extends Component {
         
 
 
+
   render() {
     return (
       <div>
+       <PageFilter />
         <SliderCard characters={this.state.characters} />
         <BarreMenu />
       </div>
     );
   }
+
 }
 
 export default Main;

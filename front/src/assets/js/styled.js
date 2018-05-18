@@ -14,10 +14,11 @@ export const ButtonFiltre = styled.button`
   border: inherit;
 `;
 
-export const Exemple2 = styled.h1`
-  font-size: 1.5em;
+export const TitleTags = styled.h1`
+  font-size: 1.2em;
   text-align: center;
-  color: palevioletred;
+  color:  rgb(95, 0, 130);
+  margin: 1rem;
 `;
 
 export const TitleMain = styled.h1`
@@ -110,6 +111,7 @@ export const ButtonPage = styled.button`
     border: inherit;
     overflow:hidden;
     cursor:pointer;
+    padding: ${props => props.padd ? props.padd : "0 10px"}
 `;
 
 export const InputLogin = styled.input`
@@ -146,12 +148,22 @@ export const BoxLogin = styled.div`
 `;
 
 export const UserPicture = styled.div`
-  width: 150px;
-  height: 150px;
-  border-radius: 50%;
-  background: black;
-  transform: translateY(-60%);
-`;
+
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:black;
+    transform:translateY(-60%);
+`
+export const FilterPage = styled.div`
+    height:92vh;
+    postion: absolute;
+    background: rgba(255, 255, 255, 0.5);
+    display:block;
+    
+
+`
+
 
 export const NavBar = styled.nav`
   position: fixed;
