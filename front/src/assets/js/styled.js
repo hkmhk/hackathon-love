@@ -103,9 +103,10 @@ export const ButtonPage = styled.button`
     margin: ${props => (props.marg ? props.marg : "5px 0")};
     background: ${props => (props.couleur ? props.couleur : "white")};
     border-radius: 20px;
-    width: ${props => (props.wth ? props.wth : "auto")};
-    height:${props => (props.hth ? props.hth : "30px")}
-    color:  ${props => (props.colorText ? props.colorText : "red")};
+
+    width: ${props => props.wth ? props.wth : "auto"};
+    height:${props => props.hth ? props.hth : "30px"}
+    color:  ${props => props.colorText ? props.colorText : "#BD10E0"};
     border: inherit;
     overflow:hidden;
     cursor:pointer;

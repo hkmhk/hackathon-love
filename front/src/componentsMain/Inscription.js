@@ -6,7 +6,7 @@ class Inscription extends Component {
     render() {
         return (
             <div>
-                <SimpleSlider/>
+                <SimpleSlider history={this.props.history}/>
             </div>
         );
     }
