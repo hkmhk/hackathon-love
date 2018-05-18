@@ -78,6 +78,20 @@ export const ProfileImg = styled.div`
     background-repeat: no-repeat;
     overflow:hidden;
 `
+export const ProfileImgBis = styled.div`
+    width: 100%;
+    height:20vw;
+    background:${props => props.image ? `url(${props.image})` : ""};
+    background-position: top center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
+`
+export const Carre = styled.div`
+width: 100%;
+height: 20vw;
+background: #fff;
+`
 
 export const Icon = styled.div`
     position:absolute;

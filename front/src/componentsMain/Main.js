@@ -21,7 +21,7 @@ class Main extends Component {
             })
             this.setState({ characters })
         });
-    }
+    } 
 
     render() {
 
