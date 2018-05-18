@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
 import SliderCard from '../components/SliderCard';
-import { getRandomInt} from '../assets/js/lib';
+import { getRandomInt } from '../assets/js/lib';
 import { getData } from '../assets/js/axios';
+import PageFilter from '../components/PageFilter';
 
 
 class Main extends Component {
@@ -27,7 +28,9 @@ class Main extends Component {
 
         return (
             <div>
-                <SliderCard characters={this.state.characters}/>
+                <PageFilter />
+
+                <SliderCard characters={this.state.characters} />
             </div>
         );
     }
