@@ -2,13 +2,17 @@ import React, { Component } from 'react';
 import SliderCard from '../components/SliderCard';
 import { getRandomInt} from '../assets/js/lib';
 import { getData } from '../assets/js/axios';
+import { checkUser } from '../assets/js/authFirebase';
+import Firebase from '../auth';
+
 
 
 class Main extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            characters: []
+            characters: [],
+            user:{}
         }
     }
 
@@ -23,7 +27,21 @@ class Main extends Component {
         });
     }
 
+    componentDidMount(){
+        const user = checkUser();
+        if (user) {
+            Firebase.database().ref(`${user.uid}/`).once('value').then(snap => this.setState({ user: snap.val() }));
+        } else {
+            this.props.history.push("/login");
+        }
+        
+    }
+
+    
+
     render() {
+        
+        
 
         return (
             <div>
