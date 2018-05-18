@@ -7,20 +7,37 @@ class HeadingProfil extends Component {
     constructor(props) {
         super(props);
         this.state = {
-
+            number:0
         };
+        this.plus = this.plus.bind(this);
+        this.moins = this.moins.bind(this);
     }
+
+    plus() {
+        this.setState({ number: this.state.number + 1 })
+    }
+
+    moins() {
+        this.setState({ number: this.state.number === 0 ? 0 : this.state.number - 1 })
+    }
+
+
     render() {
         return (
             <div className="col">
                 <div className="row mt-2">
-                    <div className="col-3 offset-3">
-                        <div className="row justify-content-center">
+                    <div className="col-3 offset-2">
+                        <div className="row justify-content-center " onClick={this.moins}>
                             <FontAwesomeIcon icon="thumbs-down" size="2x" style={{ color: "white" }} />
                         </div>
                     </div>
-                    <div className="col-3">
+                    <div className="col-2">
                         <div className="row justify-content-center">
+                            <p style={{ fontSize: "18px", fontFamily: "Roboto", color: "white", fontWeight: "bold" }}>{this.state.number === 0 ? "" : this.state.number}</p>
+                        </div>
+                    </div>
+                    <div className="col-3">
+                        <div className="row justify-content-center" onClick={this.plus}>
                             <FontAwesomeIcon icon="thumbs-up" size="2x" style={{ color: "white" }} />
                         </div>
                     </div>
