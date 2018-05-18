@@ -1,36 +1,35 @@
-import React, { Component } from 'react';
-import SliderCard from '../components/SliderCard';
-import { getRandomInt} from '../assets/js/lib';
-import { getData } from '../assets/js/axios';
-
+import React, { Component } from "react";
+import SliderCard from "../components/SliderCard";
+import { getRandomInt } from "../assets/js/lib";
+import { getData } from "../assets/js/axios";
+import BarreMenu from "../components/BarreMenu";
 
 class Main extends Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            characters: []
-        }
-    }
+  constructor(props) {
+    super(props);
+    this.state = {
+      characters: []
+    };
+  }
 
+  componentWillMount() {
+    getData("https://akabab.github.io/starwars-api/api/all.json").then(res => {
+      const characters = res.map(el => {
+        el.age = getRandomInt(20, 50);
+        return el;
+      });
+      this.setState({ characters });
+    });
+  }
 
-    componentWillMount() {
-        getData("https://akabab.github.io/starwars-api/api/all.json").then(res => {
-            const characters = res.map(el => {
-                el.age = getRandomInt(20, 50);
-                return el;
-            })
-            this.setState({ characters })
-        });
-    }
-
-    render() {
-
-        return (
-            <div>
-                <SliderCard characters={this.state.characters}/>
-            </div>
-        );
-    }
+  render() {
+    return (
+      <div>
+        <SliderCard characters={this.state.characters} />
+        <BarreMenu />
+      </div>
+    );
+  }
 }
 
 export default Main;
