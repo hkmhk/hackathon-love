@@ -1,3 +1,4 @@
+
 import React, { Component } from 'react';
 import SliderCard from '../components/SliderCard';
 import { getRandomInt} from '../assets/js/lib';
@@ -43,12 +44,15 @@ class Main extends Component {
         
         
 
-        return (
-            <div>
-                <SliderCard characters={this.state.characters}/>
-            </div>
-        );
-    }
+
+  render() {
+    return (
+      <div>
+        <SliderCard characters={this.state.characters} />
+        <BarreMenu />
+      </div>
+    );
+  }
 }
 
 export default Main;
