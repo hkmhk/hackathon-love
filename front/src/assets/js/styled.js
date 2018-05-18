@@ -150,10 +150,10 @@ export const BoxLogin = styled.div`
 `
 
 export const UserPicture = styled.div`
-    width:170px;
-    height:170px;
+    width: 170px;;
+    height: 170px;
     border-radius:50%;
-    background:rgba(255, 255, 255, 0.2);
-    transform:translateY(-60%);
+    transform : translateY(-60%);
+
 `
 

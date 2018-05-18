@@ -4,10 +4,10 @@ import FontAwesomeIcon from '@fortawesome/react-fontawesome';
 
 import robot from '../assets/images/robot_logo.png';
 
-class Home extends Component{
+class Home extends Component {
 
     render() {
-    
+
 
         return (
             <div>
