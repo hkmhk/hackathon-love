@@ -1,7 +1,13 @@
-import React, { Component } from "react";
-import { getData } from "../assets/js/axios";
-import PageButton from "./PageButton";
-import Input from "./Input";
+
+import React, { Component } from 'react';
+import { getData } from '../assets/js/axios';
+
+import PageButton from './PageButton'
+import Input from './Input'; 
+
+import firebase from 'firebase';
+import { config } from '../auth';
+
 
 class App extends Component {
   constructor(props) {
@@ -12,10 +18,11 @@ class App extends Component {
   }
 
   componentWillMount() {
-    getData("https://akabab.github.io/starwars-api/api/all.json").then(
-      characters => this.setState({ characters })
-    );
+
+    
+    getData("https://akabab.github.io/starwars-api/api/all.json").then(characters => this.setState({ characters }));
   }
+
 
   render() {
     return <div>{routes()}</div>;

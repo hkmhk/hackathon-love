@@ -2,16 +2,45 @@ import React, { Component } from "react";
 import Slider from "react-slick";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
+import Firebase from '../auth';
+
 
 import { UserPicture } from '../assets/js/styled';
 import FontAwesomeIcon from '@fortawesome/react-fontawesome';
-import { affiniteTag, ageTag, genderTag, getRandomInt } from "../assets/js/lib";
+
+import { affiniteTag,ageTag,genderTag, getRandomInt} from "../assets/js/lib";
+import { checkUser } from '../assets/js/authFirebase';
+
+
 
 import PageButton from '../components/PageButton';
 import Input from '../components/Input';
 
 
 class SimpleSlider extends Component {
+    constructor(props) {
+        super(props);
+        this.state={
+
+        }
+        this.saveUser = this.saveUser.bind(this);
+    }
+
+    saveUser(e){
+        const bt = document.querySelectorAll("button");
+        const arr = [];
+        bt.forEach(el => el.value !=="" ? arr.push(el) : "");
+        const myObject = arr.reduce((acc, el, i) => { acc[i] = el.innerHTML + acc[i] || el.innerHTML;return acc},{});
+        const user = checkUser();
+        if (user) {
+            Firebase.database().ref(`${user.uid}/`).set({
+                affiliations:myObject,
+                email: user.email
+            });
+            this.props.history.push("/home");
+        }
+    }
+    
 
 
     render() {
@@ -24,10 +53,12 @@ class SimpleSlider extends Component {
             mobileFirst: true
         };
 
-        const randomNumber = getRandomInt(1, 120);
-        const randomAffiTags = affiniteTag.slice(randomNumber, randomNumber + 15);
-        const affiTags = randomAffiTags.map((el, i) => <PageButton text={`# ${el}`} key={i} marg="4px" />);
-        const ageTags = ageTag.map((el, i) => <PageButton text={`# entre ${el[0]} et ${el[1]} `} key={i} marg="4px" />);
+        
+        const randomNumber = getRandomInt(1,120);
+        const randomAffiTags = affiniteTag.slice(randomNumber,randomNumber+14);
+        const affiTags = randomAffiTags.map((el, i) => <PageButton text={`# ${el}`} key={i} marg="4px"/>);
+        const ageTags = ageTag.map((el, i) => <PageButton text={`# entre ${el[0]} et ${el[1]} `} key={i} marg="4px" /> );
+
         const genderTags = genderTag.map((el, i) => <PageButton text={`# ${el}`} key={i} marg="4px" />);
 
 
@@ -69,7 +100,7 @@ class SimpleSlider extends Component {
                                 {genderTags}
                             </div>
                             <div className="row justify-content-center mt-4">
-                                <PageButton wth="10rem" hth="2rem" text="Valider" couleur="#070048" colorText="white" />
+                                <PageButton wth="10rem" hth="2rem" func={this.saveUser} text="Valider" couleur="#070048" colorText="white" />
                             </div>
                         </div>
                     </div>

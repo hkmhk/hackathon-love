@@ -1,23 +1,23 @@
-import firebase from 'firebase';
+import Firebase from '../../auth';
 
 
 //CREATE USER
-const signNewUser = (email, password) => {
-    firebase.auth().createUserWithEmailAndPassword(email, password).catch(error => console.log(error.message));
+export const signNewUser = (email, password) => {
+    return Firebase.auth().createUserWithEmailAndPassword(email, password).catch(error => console.log(error.message));
 }
 
 
 
 //LOG USER
-const logUser = (email, password) =>{
-    firebase.auth().signInWithEmailAndPassword(email, password).catch(error => console.log(error.message));
+export const logUser = (email, password) =>{
+    return Firebase.auth().signInWithEmailAndPassword(email, password).catch(error => console.log(error.message));
 }
 
 
 
 //AUTH OBSERVER IF USER CHANGE
-const authChange = () => {
-    return firebase.auth().onAuthStateChanged(user => {
+export const authChange = () => {
+    return Firebase.auth().onAuthStateChanged(user => {
         if (user) {
             // User is signed in.
             return user;
@@ -30,13 +30,15 @@ const authChange = () => {
 }
 
 //AUTH CHECK USER
-const checkUser = () => {
-    const user = firebase.auth().currentUser;
+export const checkUser = () => {
+    
+    const user = Firebase.auth().currentUser;
     if (user) {
         // User is signed in.
         return user;
     } else {
         // No user is signed in.
+
 
     }
 }
