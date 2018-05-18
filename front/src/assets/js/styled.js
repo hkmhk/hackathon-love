@@ -55,16 +55,28 @@ export const Paragraphes = styled.p`
     font-family: "Avenir Next", sans-serif;
     font-weight: regular;
     font-size: 1.1rem;
-    color: white;
+    color: rgba(255,255,255, 0.7);
+    width:50%;
+    border-bottom: 1px solid rgba(255,255,255, 0.7);
 `;
 
 export const LogoImg = styled.div`
-    width: 55%;
-    height:55%;
+    width: 200px;
+    height:auto;
     position:absolute;
-    transform:translate(-50%,-40%);
+    transform:translate(-50%,-50%);
     top:40%;
     left:50%;
+`
+
+export const ProfileImg = styled.div`
+    width: 100%;
+    height:45vh;
+    background:${props => props.image ? `url(${props.image})` : ""};
+    background-position: top center;
+    background-size:cover;
+    background-repeat: no-repeat;
+    overflow:hidden;
 `
 
 export const Icon = styled.div`
@@ -78,21 +90,57 @@ export const MainContainer = styled.div`
     min-height:100vh;
 `
 export const ButtonPage = styled.button`
+    margin: ${props => props.marg ? props.marg : "5px 0"};
     background: ${props => props.couleur ? props.couleur : "white"};
     border-radius: 20px;
-    width: 10rem;
-    height:2rem;
+    width: ${props => props.wth ? props.wth : "auto"};
+    height:${props => props.hth ? props.hth : "30px"}
     color:  ${props => props.colorText ? props.colorText : "red"};
     border: inherit;
-    position: absolu;
+    overflow:hidden;
+    cursor:pointer;
 `;
 
 export const InputLogin = styled.input`
+    font-size: 16px;
     background: transparent;
     border:none;
     border-bottom: 1px solid white;
     color: white;
     cursor: pointer;
+    margin-bottom: 10px;
+    width:100%;
+    ::placeholder {
+        color: white;
+        font-weight:bold;
+    }
+    :focus{
+        outline:none;
+    }
 `;
 
+
+export const Container = styled.div`
+    width:100%;
+    min-height: 100vh;
+    display:flex;
+`
+
+
+export const BoxLogin = styled.div`
+    position:absolute;
+    transform:translate(-50%, -70%);
+    left:50%;
+    top: 80%;
+    text-align:center;
+    width:80%;
+`
+
+export const UserPicture = styled.div`
+    width:150px;
+    height:150px;
+    border-radius:50%;
+    background:black;
+    transform:translateY(-60%);
+`
 

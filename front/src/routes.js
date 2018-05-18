@@ -9,17 +9,20 @@ import Inscription from './componentsMain/Inscription';
 import Main from './componentsMain/Main';
 import ProfileUser from './componentsMain/ProfileUser';
 import Favoris from './componentsMain/Favoris';
+import Match from './componentsMain/Match';
+
 
 const routes = () => {
 
     return <Router>
         <div>
             <Route exact path="/" component={Home} />
-            <Route path="/login" component={Login} />
-            <Route path="/inscription" component={Inscription} />
-            <Route path="/home" component={Main} />
-            <Route path="/profile" component={ProfileUser} />
-            <Route path="/mescoupsdecoeur" component={Favoris} />
+            <Route exact path="/login" component={Login} />
+            <Route exact path="/inscription" component={Inscription} />
+            <Route exact path="/home" component={Main} />
+            <Route exact path="/profile" component={ProfileUser} />
+            <Route exact path="/mescoupsdecoeur" component={Favoris} />
+            <Route exact path="/match" component={Match} />
         </div>
 
     </Router>

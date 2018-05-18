@@ -8,9 +8,13 @@ class PageButton extends Component {
     }
     render() {
         return (
-            <div>
-                <ButtonPage couleur={this.props.couleur} colorText={this.props.colorText}>{this.props.text}</ButtonPage>
-            </div>
+                <ButtonPage 
+                marg={this.props.marg} 
+                couleur={this.props.couleur} 
+                colorText={this.props.colorText}
+                wth={this.props.wth}
+                hth={this.props.hth}
+                >{this.props.text}</ButtonPage>
 
         );
     }
