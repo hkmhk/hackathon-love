@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { getData } from "../assets/js/axios";
-import BarreMenu from "./BarreMenu";
-//import ButtonCompte from "./ButtonCompte";
+import PageButton from "./PageButton";
+import Input from "./Input";
 
 class App extends Component {
   constructor(props) {
@@ -18,11 +18,7 @@ class App extends Component {
   }
 
   render() {
-    return (
-      <div>
-        <BarreMenu />
-      </div>
-    );
+    return <div>{routes()}</div>;
   }
 }
 

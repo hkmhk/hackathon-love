@@ -4,6 +4,15 @@ body {
   font-family: sans-serif;
 }
 
+
 html, body, #root {
   min-height: 100vh;
+}
+
+.slick-container {
+  height: 90vh !important;
+}
+
+.slick-slider, .slick-list, .slick-track, .slick-slide >div>div {
+  height: 90vh !important;
 }

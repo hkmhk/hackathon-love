@@ -1,15 +1,30 @@
 import React, { Component } from "react";
-import BarreMenu from "../components/BarreMenu";
+import SliderCard from "../components/SliderCard";
+import { getRandomInt } from "../assets/js/lib";
+import { getData } from "../assets/js/axios";
 
 class Main extends Component {
   constructor(props) {
     super(props);
-    this.state = {};
+    this.state = {
+      characters: []
+    };
   }
+
+  componentWillMount() {
+    getData("https://akabab.github.io/starwars-api/api/all.json").then(res => {
+      const characters = res.map(el => {
+        el.age = getRandomInt(20, 50);
+        return el;
+      });
+      this.setState({ characters });
+    });
+  }
+
   render() {
     return (
       <div>
-        <BarreMenu />
+        <SliderCard characters={this.state.characters} />
       </div>
     );
   }
