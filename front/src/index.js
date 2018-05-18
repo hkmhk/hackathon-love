@@ -8,14 +8,14 @@ import registerServiceWorker from './registerServiceWorker';
 //FontAwesome
 import fontawesome from '@fortawesome/fontawesome';
 import { faHeart } from '@fortawesome/fontawesome-free-regular';
-import { faThumbsUp, faThumbsDown,faGlobe,faUser } from '@fortawesome/fontawesome-free-solid'
+import { faThumbsUp, faThumbsDown, faGlobe, faUser } from '@fortawesome/fontawesome-free-solid'
 
 
 //bootstrap lib
 import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.bundle.min';
 
-fontawesome.library.add(faHeart, faThumbsUp, faThumbsDown,faUser,faGlobe );
+fontawesome.library.add(faHeart, faThumbsUp, faThumbsDown, faUser, faGlobe);
 
 ReactDOM.render(<App />, document.getElementById('root'));
 registerServiceWorker();
