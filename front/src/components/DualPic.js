@@ -1,20 +1,48 @@
 import React, { Component } from 'react'
 import {Carre} from '../assets/js/styled';
+import { Droppable } from 'react-drag-and-drop'
+import {ProfileImgBis} from '../assets/js/styled';
+
 
 class DualPic extends Component {
     constructor(props) {
         super(props);
-        this.state = {  };
+        this.state = { 
+            image: ''
+         };
     }
     render() {
+                <div>
+                    <Droppable>
+                        types={['image']} 
+                        onDrop={this.onDrop.bind(this)}
+                        <div className="row justify-content-center">
+
+                            <Carre className="col-4" />
+                            <div className="col-4">
+                                <ProfileImgBis type="image" image={this.props.image}></ProfileImgBis>
+                            </div>
+
+                        </div>
+                    </Droppable>
+                </div>          
+
+        
         return (
-        <div className="row justify-content-center">
+                <div>
+                    <div className="row justify-content-center">
 
-            <Carre className="col-4" />
-
-        </div>
+                        <div className="col-4">
+                            <ProfileImgBis type="image" image={this.props.image}></ProfileImgBis>
+                        </div>
+                    </div>
+                </div>
             
         );
+    }
+    onDrop(image) {
+        console.log(image)
+        // => banana 
     }
 }
 

@@ -1,5 +1,7 @@
 import React, { Component } from "react";
 import {ProfileImgBis} from '../assets/js/styled';
+import { Draggable} from 'react-drag-and-drop';
+import DualPic from '../components/DualPic';
 
 
 class MosaicPic extends Component {
@@ -14,15 +16,20 @@ class MosaicPic extends Component {
 
         const characters = this.props.characters.map((el,i) => {
             return  <div key={i} className="col-2">
-                            <ProfileImgBis image={el.image}></ProfileImgBis>
+            
+                            <Draggable><ProfileImgBis type="image" image={el.image}></ProfileImgBis></Draggable>
+                            
                     </div>
         })
 
         return (
-                <div className="row no-gutters">
-                    {characters}
-                </div>
-            
+                <div>
+                    <DualPic />
+                    <div className="row no-gutters">
+                        {characters}
+                    </div>
+                </div>  
+                
         );
     }
 }

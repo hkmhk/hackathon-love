@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import MosaicPic from '../components/MosaicPic';
 import { getData } from '../assets/js/axios';
-import DualPic from '../components/DualPic';
+// import DualPic from '../components/DualPic';
 
 
 class Match extends Component {
@@ -25,7 +25,7 @@ class Match extends Component {
 
         return (
                 <div>
-                    <DualPic />
+                    {/* <DualPic /> */}
                     <MosaicPic characters={this.state.characters}/>
                 </div>
         );
